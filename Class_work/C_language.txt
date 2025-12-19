@@ -110,7 +110,7 @@ structure of c program
 2) connection with c language libaries 
 
 #include<stdio.h>
-#include<conio.h> //optional
+#include<conio.h> //optionalgit
 
    here , # : which means predefined
          
@@ -140,3 +140,83 @@ void main(){
   }
 
 ------------------------------------------------------------------------------------
+ printf() :
+          
+          in c language printf is a function which is used to display
+          message on output (console sccreen)
+
+
+          syntax :
+
+           printf("message");
+
+           ;  semicolon which is include end of the line 
+
+           it is used to terminate statement 
+
+           by defau;t printf function join with previous function
+
+-----------------------------------------------------------------------------------------
+
+escaps sequence :
+
+ \n :new line 
+ \t :tab 
+ \' :to display single quote  
+ \" : to display double quote
+ \\ : to display slash
+
+
+
+ -------------------------------------------------------------------------------------------
+
+ datatype : which type of value store in a variable its called datatype.
+
+
+                                         values
+                                           |
+                                           |
+--------------------------------------------------------------------------------------------------------------------------------------------------- 
+   |                                                   |                                                                    |
+   v                                                   v                                                                    v
+ numbers                                          characters                                                             yes/no
+   |                                                  |                                                                     |
+   |                                                  |                                                                     |
+                                                      v
+---------------------                          -----------------------                                           ------------------------          
+   |          |                                 |                 |                                                         |        
+without     with                          single char           string                                                 (boolean)
+points      points
+
+e.g 15      e.g 150.50                        e.g 'A'            "hello"                                               true/false
+
+int(%d)        float  (%f)                       char               char[size]                                             bool
+(integer)      double (%lf)                       (%c)                  %s
+               long double (%Lf)
+------------------------------------------------------------------------------------------------------
+
+variable : variabel is name which can store a value 
+
+          in c language we can take any name as a variabel 
+          
+          but there are some rules which we have to follow 
+
+          variabel devide in 3 steps
+
+          1) variabel declaration :
+           before use with vqriable we must to declare with spacific data type
+
+           syntax : <datatype> variabelname;
+
+          2) variabel initlization :
+
+            assign a value
+             
+             syntax : variabelname = value
+
+          3) variabel calling or variabeluse
+
+             syntax : printf(variabelname)
+
+
+             
