@@ -15,4 +15,5 @@ void main(){
    printf ("\n%d -%d -%d =%d",num,num1,num2, num-num1-num2);//sub
    printf ("\n%d *%d *%d =%d",num,num1,num2, num*num1*num2);//multiplication
    printf ("\n%d /%d /%d = %d",num,num1,num2,num/num1/num2);//divistion
+   printf ("\n%d %% %d %% %d = %d",num,num1,num2,num%num1%num2);//  %
 }

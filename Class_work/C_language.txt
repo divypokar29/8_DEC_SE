@@ -218,5 +218,68 @@ variable : variabel is name which can store a value
 
              syntax : printf(variabelname)
 
+-------------------------------------------------------------------------------------------------
 
-             
+
+
+
+
+
+1) airthmetic operator :
+
+   to perform airthmetic operator we need to user airthmetic operators
+
+    + - * / %
+
+2) assignmet operator :
+   
+    =
+
+    to assign a value 
+
+    shorthand operator :
+                        combination of airthmetic and assignmet operator
+
+                        += -= %= /= %=
+
+
+3) Relational operator : ir (comparioson operators)
+              
+
+              < > <= >= == !=
+
+4) logical operator :
+
+       && (and operator)
+
+       || (or operator)
+
+       ! (not operator)
+
+
+5) unity operators (increment and decremant operator )
+
+     this operator divided in 2 part 
+
+     postfix 
+     prefix
+     
+
+     ++(increment)
+     --(decremant)
+
+6) bitwise operator : which is performon bitwise
+
+     xor
+     not
+     or
+     left shift
+     right shift
+
+7)conditional operator :
+       
+        exp1 ? exp2 : exp3;
+
+        ?:
+
+8)
