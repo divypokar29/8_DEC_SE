@@ -346,4 +346,89 @@ control statement
   == equal too
 
   ----------------------------------------------------------------------
+  operator  :::: () []
+                * / % (left to right)
+                +  - (left to right)
+
+#include<stdio.h>
+void  main (){
+
+  int a =10;
+  int b= 5;
+  int c=3;
+
+  int ans = a+ b -c;
+  printf("\n ans = %d",ans);
+
   
+   ans = a- b +c;
+  printf("\n ans = %d",ans);
+}
+
+============================================================================================================
+#include<stdio.h>
+void main(){
+
+  int ans;
+
+  ans= 10+2*3;
+  printf("\n ans = %d",ans);
+
+  ans= 10*2/3;
+  printf("\n ans = %d",ans);
+
+ans= 10+2*3/5;
+  printf("\n ans = %d",ans);
+
+  ans= 10+2+3(30-3);
+  printf("\n ans = %d",ans);
+
+}
+======================================================================================================================
+3) else ... if statement
+ 
+
+         syntax :
+
+          if(condition)
+          {
+            statement;
+          }
+          else if(condition)
+          {
+            statement;
+          }
+           else if(condition)
+          {
+            statement;
+          }
+           else if(condition)
+          {
+            statement;
+          }
+          else{
+            flase statement;
+          }
+
+
+4) nested if statement :
+      
+       when if statement call inside the another if statement
+
+
+
+       syntax:
+       {
+        if(condition)
+        {
+          true statement;
+        }
+        else
+        {
+          false statement
+        }
+       }
+       else
+       {
+
+       }
