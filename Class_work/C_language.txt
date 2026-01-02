@@ -432,3 +432,56 @@ ans= 10+2*3/5;
        {
 
        }
+
+  5)switch case : which is use for multiple condition
+
+   
+     note : we cant use flot data type .
+            we cant use logicaloperation
+
+
+    syntax :
+
+     switch(expression)
+     {
+      case value : 
+      statement
+      break;
+
+
+      case value: 
+      statement;
+      break;
+
+      default:
+          statement;
+     }
+======================================================================================================
+
+Looping concept : 
+        
+        repetation 
+        there are two type of loop 
+
+        
+        1)for loop
+        2)while loop
+        3)do ...while loop
+---------------------------------------------------------------
+
+1) for loop : for loop is a sequence controlled loop
+
+   which is divided in 3 counter
+                    
+  syntax:
+  for(counter1;counter2;counter3)
+  {
+
+  }
+
+  syntax:
+  for(initlization;condition;updation)
+
+  {
+    
+  }
