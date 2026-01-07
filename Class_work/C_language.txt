@@ -485,3 +485,19 @@ Looping concept :
   {
     
   }
+
+  ============================================================================================
+  nested for loop:
+
+    when loop call inside the another loop
+
+    syntax:
+     
+     for (initlization;condition;updation){
+
+      for(initlization;condition;updation)
+          {
+            ...
+          }
+
+     }
