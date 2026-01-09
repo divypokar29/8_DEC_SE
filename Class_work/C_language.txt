@@ -501,3 +501,21 @@ Looping concept :
           }
 
      }
+-------------------------------------------------------------------------------
+
+
+do... while loop: 
+               do while loop is an exit controlled loop  - it check condition at exit level.
+
+               so, there are at least 1 posibility of that it execute 1 time if condition goes false
+
+
+               syntax:
+
+
+               initlization
+               do{
+                statement;
+                updation;
+
+               }while (condition);
