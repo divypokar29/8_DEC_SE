@@ -40,7 +40,7 @@ c language was invented by denis m. ritchie in at and t bell lab.
 
 --------------------------------------------------------------------
 
-history os c language :
+history of c language :
 
 before c programing there is BCPL language then b language and then after a language 
 so ,denis m ritchie invented a programing language in 1972 (trandition c programing).
@@ -270,7 +270,7 @@ variable : variabel is name which can store a value
 
 6) bitwise operator : which is performon bitwise
 
-     xor
+     or
      not
      or
      left shift
@@ -519,3 +519,94 @@ do... while loop:
                 updation;
 
                }while (condition);
+
+=================================================================================================================================================
+
+function :: 
+         function is a most power full topic of any programing language 
+         function provides reusabelity 
+
+         using of function we can reduce our code.
+
+         using of we can calll code as per our need.
+
+         so,we can save our develepment time.
+
+         there are 2 types of functions
+
+         1) built - in function : which is predefine by c programing 
+
+            e.g.  printf(""),scanf(""),getch()..........
+
+         2) user-defined function : that function which is created by user as per  requirement.
+
+
+=> how to create a funaction ?
+
+
+there are a 3 steps of follow function
+
+step 1: function declaration 
+
+    syntax : <returntype> function();
+
+
+step 2: function defineation : main block of code which repressent function executation
+
+syntax:
+
+  <returntype> function();
+  {
+    //block of code
+  }
+
+
+step 3 : function calling  : use of function 
+
+syntax:
+   
+   functionname ();
+==============================================================================================
+
+function types :
+
+there are a three 4 types of function categories
+
+
+1) function without parameters and function without return types.
+
+syntax: 
+  
+    void function(){
+
+    }
+
+2) function with parameters and function without return types.
+
+   syntax :
+
+     void funnction (parameters,parameters...)
+
+     {
+
+     }
+
+3) function without parameters and funaction with return type.
+
+  syntax :
+     returntype function ()
+     {
+      return value;
+     }
+
+4) function with parameters and function with return type
+  
+
+   syntax :
+      
+      returntype function(parameters,parameters....)
+      {
+        return value;
+      }
+
+============================================================================================================================================
