@@ -9,7 +9,7 @@ convert string into reverse order
 
 int main()
 {
-   char name[10]= {};
+   char name[10];
    int i;
    
 
