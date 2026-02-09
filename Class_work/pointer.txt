@@ -1,0 +1,31 @@
+what is pointer ::
+   
+    pointer is a variable which contain another variables memory address.
+
+    e.g.
+
+    A :
+       
+       101       201
+       182       202
+       103       203
+
+
+-----------------------------------------------------------------
+
+
+in c programing whenever we create any new variable it assign a specific memory
+
+
+ 
+         int a  = 10;
+            
+              101                          (address)
+              -----------------------------------
+           a  10                           (value)
+              -----------------------------------
+
+
+------------------------------------------------------------------
+* = value finde 
+& = address find 
