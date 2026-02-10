@@ -27,5 +27,5 @@ in c programing whenever we create any new variable it assign a specific memory
 
 
 ------------------------------------------------------------------
-* = value finde 
+* = value find 
 & = address find 
