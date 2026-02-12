@@ -610,3 +610,56 @@ syntax:
       }
 
 ============================================================================================================================================
+FILE HANDALING ::::
+
+when we create any variable is store memory in temporary when a close program it destry memory 
+
+memory place area is ram not a hardisk 
+
+int a = 10;
+------------------------------------------
+but after some time if i want to access memory or value we cant access it so , at the time 
+we have to store values  or memory in hardisk area
+
+e.g.  zoom aplication -characters
+
+
+File handling : to store variabel vallu in specific file and to open this kind file ad close filee
+ 
+
+there are two types of files
+
+1) text file 
+2) binary file
+--------------------------------------------
+note: file handling which is connected with memory location - so it reqire address
+so , here we use file pointer consept 
+
+int a=10;
+char name[10];
+
+FILE *fp;        here FILE retrive from <stdio.h> heder file 
+--------------------------------------------
+forpen():to open specific file
+
+    syntax : fopen("filename","mode")
+
+fcloce() : to cloce specific file 
+
+   syntax : fcloce(fp)
+
+fprint(): to write somthing in file 
+
+fscanf() : to read from file 
+
+---------------------------------
+
+r: read mode
+w: write mode
+a: apend mode
+---------------------------------
+fgetc(fp) : this method accept single single characters from file 
+
+EOF: end of file :it is indicate that your file is end now.
+
+

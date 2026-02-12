@@ -1,0 +1,122 @@
+what is c++ :
+    
+     c++ is an extend version of c language 
+
+     c language + 1
+
+     c + 1
+
+     it showing postfix increment
+
+
+----------------------------------------------------
+
+POP vs OOP :
+
+
+     proccedure oriented programing
+
+
+    which is mainly focus on function.
+
+
+    our all programs divide in chunks of functions
+
+OOP :
+
+  object oriented programing language
+
+  ->everthings depends on object
+
+---------------------------------------------------------
+
+What is c++
+
+-> c++ is an object oriented programing language developed by bajarne stroustrup at 
+   AT & T Bell lab in 1983.
+
+
+-> Simula Was the first object oriented programing language 
+   it was develop during 1960s by kristen nygaard 
+   and old dhal
+
+
+-> stroustrup had initially given the name " C with classes" to
+   C++ in 1989, the name was changed to c++
+
+
+-> C++ can be used to write procedural as well as object
+   oriented,thats why c++ is also called a hybrid language.
+
+-----------------------------------------------------------------------
+
+=> object base and objec oriented language:::
+
+  - the language which supports the class and objects but does not supports 
+    the inheritance and polymorphism is called object based language.
+
+  - the object - oriented language support all the Features such 
+    as class,objec,inheritance,polymorphism,etc. 
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+                 Object oriented program                            |         proccedure-oriented program
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+- Data  is secured                                                 |  - Datais not secured
+
+- data and function are combined together                          | - Data and funcction are not combined together
+
+- this is a good programing approach for real - time software      | - This is good for scientific application 
+  design                                                               develepment
+
+-all Features of pop may be present in OOP                         | - if dose not support the Features of opp
+
+-we can define an abstact data type which describe all object      |- we cannot define an abstactdata type
+ of a class                                                        | - 
+
+- object communicate with each other by message passing            | - many function can access the ssame data
+
+- the follows the bottom-up design concept                         | -
+
+
+
+================================================================================================
+
+Advantage of OOPs ::
+
+->security : the data and function are  combined together and the data 
+             can be made hidding from the outside world so the security of data
+             increase
+
+->reusability : New objects can be created wwith small modifications to the 
+               existing once becuse inheritance provide the Facility of recusabilyty 
+
+-> Due to the modulariy,oop conncept is good for development ''
+
+-> object oriented language provide good quality of software ,increase in 
+ productivity and less maintenance 
+
+--------------------------------------------
+Disadvantage of OOPs ::
+
+->The message- base communication between many object in a complex 
+ system is difficult ti trace and debug.
+
+->it reqiremore memory to proccess at a greater speed 
+
+-> it runs slower than the traditional progaming language 
+
+-> the recusabilyty of code is not always possible.
+
+-----------------------------------------------
+Simularities in c and c++
+
+-> c++ is superset of c. it contains syntax and Features of C language 
+
+-> most of the basic syntax of c++ is simular to that of except some rules 
+ and constructions od its own.
+
+-> is contains the same control statement ; the same scope and storage 
+ class rule ; event the arithmetic ,logical, bitwise, operator and the data type 
+
+-> both the language start with the main function
