@@ -59,7 +59,7 @@ What is c++
     as class,objec,inheritance,polymorphism,etc. 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
-                 Object oriented program                            |         proccedure-oriented program
+                 Object oriented program                           |         proccedure-oriented program
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 - Data  is secured                                                 |  - Datais not secured
@@ -76,7 +76,7 @@ What is c++
 
 - object communicate with each other by message passing            | - many function can access the ssame data
 
-- the follows the bottom-up design concept                         | -
+- the follows the bottom-up design concept                         | - if follows the top-down design concept
 
 
 
@@ -102,21 +102,21 @@ Disadvantage of OOPs ::
 ->The message- base communication between many object in a complex 
  system is difficult ti trace and debug.
 
-->it reqiremore memory to proccess at a greater speed 
+->it reqiremore memory to proccess at a greater speed
 
--> it runs slower than the traditional progaming language 
+-> it runs slower than the traditional progaming language
 
 -> the recusabilyty of code is not always possible.
 
 -----------------------------------------------
 Simularities in c and c++
 
--> c++ is superset of c. it contains syntax and Features of C language 
+-> c++ is superset of c. it contains syntax and Features of C language
 
--> most of the basic syntax of c++ is simular to that of except some rules 
+-> most of the basic syntax of c++ is simular to that of except some rules
  and constructions od its own.
 
--> is contains the same control statement ; the same scope and storage 
- class rule ; event the arithmetic ,logical, bitwise, operator and the data type 
+-> is contains the same control statement ; the same scope and storage
+ class rule ; event the arithmetic ,logical, bitwise, operator and the data type
 
 -> both the language start with the main function
