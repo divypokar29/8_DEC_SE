@@ -120,3 +120,112 @@ Simularities in c and c++
  class rule ; event the arithmetic ,logical, bitwise, operator and the data type
 
 -> both the language start with the main function
+
+
+-----------------------------------------------
+
+OOPS: object orianted programing system
+
+
+  class: class is a collection of diffrent diffrent data members 
+
+    
+     class is a blueprint of object 
+
+     class is a collection of elements 
+
+     class is a userdefine datatype 
+
+
+     syntax :
+ d
+      class <classname>()
+      {
+        public:
+
+          data member;
+          member function();
+      };
+
+---------------------------------------------------------------------
+
+object : object is an instance of class .or we can say that 
+         object is a  variable of class
+
+         using of object we can access properties of class
+         
+         syntax:
+         classname objname = classname();
+
+---------------------------------------------------------------------
+constructor : constructor is a most powerfull concept of c++
+            constructor is a special member function  
+            or we can say that constructor is speciale method 
+
+            which is invoke automaticly whnevver we create object of class 
+            it is usually work for initilization of member.
+
+            note: constructor does not have any return type and  
+                 constructor always declare in public mode.
+
+                constructor name and classname both are same we cant take 
+                diffrent as a constructor.
+
+                syntax :
+                  class <classname> 
+                  {
+                    constructor:
+                       body of constructor
+                  }
+
+---------------------------------------------------------------------
+there are mainly 3 types of constructor 
+
+
+1) defualt constructor 
+2) parameterized constructor
+3) copy construccture
+
+---------------------------------------
+
+1) defulat constructor : dose not contain any parameter 
+    when we want to display or do some statice value 
+    we can use defualt constructor
+
+2) parameterized constructor : when we pass parameter 
+    at objec creation time its calles parameterized
+    constructor
+
+3) copy constructor :copy constructor is a spaicial co constructor which 
+       create new object using of existing object.
+
+       syntax: 
+         constructorname ( const classname &obj)
+         {
+          ..
+         }
+
+         here & means addresnoperator 
+----------------------------------------
+
+this pointer : this pointer which is refers current class object 
+
+      means we can define current class member using of this pointer
+-----------------------------------------------
+
+pass by value : funcction parameter we are passing only object 
+                it will not affect original value
+
+                - we are passing value here only
+
+pass by referance : we are passing referance of object 
+                   so whenever we apply chnages it after 
+                   original value
+
+                   -we are passing original object 
+                  
+
+pass by address : pointer concept
+
+        here, we pass address of object so , wheneverwe apply chnages in addres it affect 
+        original
