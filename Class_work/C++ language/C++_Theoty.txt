@@ -228,4 +228,135 @@ pass by referance : we are passing referance of object
 pass by address : pointer concept
 
         here, we pass address of object so , wheneverwe apply chnages in addres it affect 
-        original
+        original value
+
+--------------------------------------------------------
+
+inheritance :
+
+      inheritance is a most powerfull concept of oops concept 
+
+      -> inheritance provide reusability - so, we can reduce our work and save develepment time 
+
+      -> inheritance provide parent and child relanstionalship
+
+      there are 5 types of inheritance 
+
+      1) single level inheritance
+      2) multi level inheritance
+      3) multipal level inheritance
+      4) hierarchical inheritance
+      5) hyberid inheritance
+
+      -> inheritance is a part of relanstionalship so, it represent Is-A relanstionalship
+
+
+      parent - child (100% utility of pararents properties.)
+
+--------------------------------------------------------
+
+   1)single level inheritance 
+
+    when parent and child in relanstionalship ists called single level inheritance 
+
+    A (parent)
+    |
+    v
+    b (child)
+
+    syntax :
+
+    class parentclass
+    {
+
+
+    };
+    class chileclass : <accessspecifier> <paratclass>
+    {
+
+    };
+    
+--------------------------------------------------------
+ accessspecifier or visibility modes
+
+ there are 3 type of access specifier
+
+ 1) public
+ 2) priveate
+ 3) protected
+
+ 
+--------------------------------------------------------
+in structure by defualt all member are public but in the class by defualt 
+all member aRE priveate so , we have to 
+define in public mode.
+
+
+-> public : we can access class properties from anyware inside the and outside 
+           the classes
+
+           -> anyware from the progam
+
+-> priveate : priveate means priveate data - we cant access outside the class
+             even child cant user priveate class data member and member function 
+
+             so, priveate provide data proteaction and data hiding in calss function 
+
+             ->so , own class can access
+
+-> proteacted : proteacted is similer like priveate but proteacted member 
+              ccan access by own class and child class.
+
+             -> own class and child class
+--------------------------------------------------------
+
+2) Multi level inheritance :
+
+       EXtend level of multi level inheritance :
+
+       class A                        // class A is a super class or base class or parent class
+       {
+
+       };
+       class B :public <parentclass>  // class B is a intermidiate parent class
+       {
+
+       };
+       class C : public <paratclass>  //class C is a sub class or derived class or child class
+       {
+
+       };
+
+ ----------------------------------------------------------
+
+ 3) multipal level inheritance :
+
+          in thus inheritance there are more than one parent class and one child class 
+
+          means one child can have more than one parant or we can saay that multipal parent 
+          class
+
+          but in real multipal inheritance not supported becuse in 
+          real world two parent are not possible thats why java does not support this concept
+
+          multiple inheritance the main aim to achieve multiple parents funcctionalitiy in one child class
+
+          syntax :
+
+          class parent1
+
+        {
+
+        };
+        class present2
+        {
+
+        };
+        class child : public parent1, public parent2
+        {
+
+        };  
+
+        but there are possibility of ambiugity (confusion between same name parameter)
+
+        ------------------------------------------------------------------------
