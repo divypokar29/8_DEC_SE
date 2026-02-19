@@ -360,3 +360,63 @@ define in public mode.
         but there are possibility of ambiugity (confusion between same name parameter)
 
         ------------------------------------------------------------------------
+
+there is one issue or we can any problem with multiple inheritance 
+
+
+ambigity : Ambigity means when both parent have same name method and child import 
+           (inheritance), it generate confusion its called ambigity.
+
+
+           unfortunatlly chid have 2 same name method so , compiler get confusion whicch 
+           method i have to access first.
+
+--------------------------------------------------------------------------------------
+:: this is scope resolution operator means 
+   which class properties you want to access it 
+-------------------------------------------------------------------------------------
+ 4) hierarchical inheritance : 
+                              
+
+                              A
+                              |
+                              v
+                -------------------------------
+                |                             |
+                v                             v 
+                B                             C
+
+    when one parent have multiple child class
+
+
+-------------------------------------------------------------------------------------
+
+5) hyberid inheritance : 
+
+         most complicted inheritance 
+
+         becuse it represent like dimond - and it create ambigity
+
+         in simple language we can say that hyberid inheritance 
+         is a combination of multiple and hierarchical inheritance
+
+                      A 
+                      |
+              ------------------
+              B                c
+              \                /
+               \              /
+                \            /
+                 \          /
+                  \        /
+                   \      /
+                    \    / 
+                     \  /
+                       D
+------------------------------------------------------------------------------------
+to resolve dimond problem we can use virtual keyword 
+
+now, virtual keyword inform compiler that you dont have to create 
+seprate copy of parent class insted of seprate copy you can 
+pass duplicate copy so ,it remove ambigity
+
