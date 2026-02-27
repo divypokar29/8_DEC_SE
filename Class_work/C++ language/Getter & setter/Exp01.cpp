@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+class Student
+{
+	private:
+		int id;
+		string name;
+		float mark;
+		
+		public:
+			void setId(int id)
+			{
+				this->id=id;
+			}
+			int getId()
+			{
+				return id;
+			}
+
+			void setName(string name)
+			{
+				this->name=name;
+			}
+			string getName()
+			{
+				return name;
+			}
+            
+			void setMark(float mark)
+			{
+				this->mark=mark;
+			}
+			float getMark()
+			{
+				return mark;
+			}
+};
+main()
+{
+	Student s=Student();
+	
+	s.setId(3);
+	cout<<"Id :"<<s.getId()<<endl;
+	
+	s.setName("mustved");
+	cout<<"name :"<<s.getName()<<endl;
+	
+	s.setMark(45.34);
+	cout<<"mark :"<<s.getMark()<<endl;
+}

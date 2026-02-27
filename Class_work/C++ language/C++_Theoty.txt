@@ -420,3 +420,249 @@ now, virtual keyword inform compiler that you dont have to create
 seprate copy of parent class insted of seprate copy you can 
 pass duplicate copy so ,it remove ambigity
 
+------------------------------------------------------------------------------------
+destrcutor : destrcutor mainly work to destroy object 
+        whenever we close our block it automatically destroy object after use. 
+
+        same like constructor declare in public mode as destructor declare in public mode 
+
+        but in destructor we have to add ~ sign in prefix and same name as class name 
+
+        syntax : 
+
+        ~classname
+        {
+            // body of destructor 
+        }
+------------------------------------------------
+encapsulation : so sounds like capsule 
+
+    encapsulation is a most powerfull concept of oop concept which bind 
+    different different data member and member functions in single entity 
+    and provide data hiding from outside the world. 
+
+    encapsulation concept is achhieve by class and object example. 
+
+--------------------------------------------------------
+polymorphism : poly means many and morphism means forms 
+
+    one named method has different forms its called polymorphism 
+
+    polymorphism is derived from greek word means one class can contain same 
+    name multiple methods 
+
+there are 2 types of polymorphism
+1) method overloading  - compile time polymorphism 
+2) method overriding   - run time polymorphism
+
+-----------------------------------
+1)  Compile Time polymorphism : 
+    which is also know as early binding and static polymorphism
+
+    which is achieve by method overloading and operator overloading 
+
+
+2) run time polymorphism : 
+    which is also known as late binding and dynamic polymorphism
+    
+    which is acheive by method overriding (inheritance ) and virtual function . 
+------------------------------------------------
+Method overloading : 
+
+        when one class can contain same name multiple methods its called 
+
+        method overloading. 
+
+        Product 
+            -> clickEvent 
+                    (image)
+                    (button)
+                    (text)
+
+        note : same name method with different signature (different parameters)
+============================================================================================
+                         Encapsulation:
+                                                                               <<20-02-26>>
+-> Encapsulation is a most powerfull conceptof oop concept which bind different diffreent 
+data member and member function in single entity and provide data hiding for outside the 
+world.
+
+
+-> encapsulation concept is achieve by class and object examle.
+
+1> data hiding
+2> data prevent from outside world
+3> security no one can directly change from outside the world
+4> data control no one can add unwanted value or apply changes
+============================================================================================
+                                       Polymorphism: 
+                                                                               <<20-02-26>>
+-> poly means many and morphism means froms
+
+-> one method has different forms its called polymorphism
+-> polymorphism is derived from greek word means one class can contain same name multipule
+method
+
+-> ther are 2 types of polymorphism
+
+1) method overloading - compiler time polymorphism
+2) method overriding - run time polymorphism
+
+---------
+1) compiler time polymorphism
+-> which is also know as early binding and static polymorphism
+->which is achieve by method overloading and operator overloading
+
+2) run time polymorphism
+-> which is acheiv by method overriding(inheritance) and virtual function
+-----------
+Method overloading:
+
+when one class can contain same name multipule methods its called method overloading
+
+product:
+    ->click event
+    (image)
+    (button)
+    (text)
+
+not: same name method with diffirent signature (diffirent parameters)
+---------------
+Method overriding:
+
+-> when parent and child both have same name method and same name arguments
+its called method overriding
+
+symtax:
+        class parent
+        {
+            public:
+            void display()
+            {
+
+            }
+        };
+        class Child:public parent
+        {
+            public:
+            void display()
+            {
+                
+            }
+        };
+        main()
+        {
+          Child obj=Child();
+          obj.display();
+        }
+============================================================================================
+                         Abstruction:
+                                                                               <<21-02-26>>
+
+Abstruction: is a concept which provide only few information not allocated background 
+information 
+
+-> the main aim of abstruction concept is to achieve data hiding and hide 
+implementation
+
+-> abstruction is a concept which is only achieve by abstruc class and abstrucmethod
+
+---------------
+Abstruction method: / pure virtual function:
+
+-> pure virtual function means function dose not contain implementation 
+-> adstruction method which is indicate by pure virtual function means withot
+body only method declaration.
+
+syntax:
+    vitrual<returntype>functionname=0;
+
+            A 
+--------------------------
+|                        |
+B                        C
+
+at the time of inheritance there no data hiding between two choild so resolve this 
+situation we can use abstruction concept here
+-----------------------
+
+abstruction class:
+
+-> a class which can contain abstruction method its colled abstruction class
+
+=============================================================================================================
+
+Aggregation : Aggregation is a part of relanstionalship
+
+     inheritance provide Is - A relanstionalship
+
+     Aggregation provide Has - A relanstionalship
+
+     Is - A relanstionalship : parent is connected with chid
+            ( 100% inheritance )
+    
+    Has - A relanstionalship : Departmant has staff
+          ( we are use properties of another class using of referance inside of inheritance)
+
+===========================================================================================================
+
+frind function : frind is a special member frunction 
+       which can acccess priveate member outside the class 
+
+       frind function declare with using  of frind keyword 
+
+       syntax:
+
+       friend <returntype> <functionname> (claass obj);
+===========================================================================================================
+friend class :
+   
+    A calss can acccess properties of another class priveate property
+
+    syntax:
+
+     class anothercalss; // forward declaration
+
+     class Mainclass
+     {
+        priveate:
+         member
+         friend class <friendclassname>;
+     }
+===========================================================================================================
+file handling concept in c++
+
+File handling : to accept data from user and store in file 
+         or we can say that to perform operator on file
+
+
+         File operations :
+            -> create
+            -> read
+            -> write 
+            -> delete 
+            -> update
+
+
+         file ha ndling class:
+           1) fstrem
+           2) ifstrem 
+           3) ofstrem
+
+
+    1) fstrem : file strem - it is used for both read and write operations
+
+    2) ifstrem : input file strem - it is used for read operations
+
+    3) ofstrem : output file strem - it is used for write operations
+
+
+    file handling syntax : 
+         
+         #include<fstrem>
+
+         fstrem <filename> <mode>;
+
+        file handling mode:
+
+          1) io::in - input 

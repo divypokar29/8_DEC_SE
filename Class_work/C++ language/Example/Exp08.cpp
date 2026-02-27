@@ -1,3 +1,4 @@
+// example of a ambigity
 #include<iostream>
 using namespace std;
 

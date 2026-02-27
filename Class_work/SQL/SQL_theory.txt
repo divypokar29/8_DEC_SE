@@ -1,0 +1,180 @@
+what is database ?
+---------------------------------------------
+
+Database is a collection of data.
+
+which is contain data in tabiular formate
+
+Row and colume wise we can store multiple  data in simple frame.
+
+Row reperesent single record and colume reperesent specific field name of that record 
+
+e.g
+
+
+name     subject     city     pincode     (colume name)
+---------------------------------------------------------
+rakesh    MCA       indore    452015       (row)
+
+
+
+we can store multiple  records we can retrive records specific condition wise 
+even we caan updete and delete records condtion wise.
+------------------------------------------------------------------------------
+=> DDL Data defination language:
+
+ to create structure of database and table we used DDl commands using below
+ commands we can create structure we can add remove fields we can remove  table 
+ or we can renmae it using DDL commands .
+
+  1) create
+  2) Alter 
+  3) drop
+  4) truncate
+  5) select
+
+ --------------------------------------------------------------
+ => DQL = data Query language
+
+  1) select
+
+
+  ---------------------------------------------------------
+
+  => DCL : data control language
+
+  1) grant
+  2) remove
+
+  ------------------------------------------------------------
+
+  => TCL = Trangaction control language 
+
+  1) commit
+  2) rollback
+  3) savepoint  
+----------------------------------------------------------------------------
+SQL  : structure Query language 
+
+it is a programing language 
+
+using SQL we can perform all database operations.
+
+1.create 
+2.read
+3.updete
+4.delete
+
+--------------------------------------------------------------
+
+login with mysql cmd panel
+
+#mysql -u root -panel
+Enter your password :
+
+----------------------------------------
+Create database syntax :
+   
+   create database <databasename>;
+
+   e.g
+
+   create database 8DECSE;
+
+   now, next step to check all databses;
+
+
+     # show databaases;
+
+   now ,next remove databse 
+
+     # drop database <databasename>
+
+     e.g
+
+      # drop database mydb;
+      show databse;
+
+--------------------------------------------------------------------------------------
+now , next select your database which you want to workupon it 
+
+syntax :
+   -> use <databasename>;
+
+   e.g.
+
+   # use 8decse;
+
+------------------------------------------------------------------------------
+
+table: one database can contain as many as tables
+
+ e.g
+   
+   table contain row and colume 
+
+next step: table creation.
+
+ 
+  syntax :
+    
+     create table<tablename> (
+        <columename>  <datatype>
+        <columename>  <datatype>
+        <columename>  <datatype>
+     );
+
+e.g
+  
+   create table Student 
+   (
+    id int,
+    name varchar(20),
+    subject varchar(20),
+    score int
+   );
+
+now, next check table is proper created or not using dascribe command 
+
+syntax :  #desc <tablename>;
+
+e.g
+
+   -> desc student;
+
+-------------------------------------------------------
+
+Alter : alter command is most important part of DDL commands
+
+   using of alter command we can add , remove or modifiy field of table 
+
+   1) add
+   2) drop
+   3) modifiy
+
+ 
+
+    syntax : 
+       
+       alter table <tablename> <altercommand> fieldname datatype
+
+
+     e.g 
+
+        -> alter table student add city varchar(20);
+
+        -> desc student;
+--------------------------------------
+    syntax: 
+      
+      alter table student <drop> fieldname;
+
+    e.g 
+      
+       altet table student add dummy varchar(20);
+
+       alter table student drop dummy;
+----------------------------------------------
+syntax :
+    
+     
