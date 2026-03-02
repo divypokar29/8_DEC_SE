@@ -175,6 +175,168 @@ Alter : alter command is most important part of DDL commands
 
        alter table student drop dummy;
 ----------------------------------------------
-syntax :
+
+modifiy : when we want to channge any field data type or field size we can 
+use modifiy
+
+syntax : 
+         
+         alter table <tablename> modifiy <columename> <datatype>;
+
+         e.g.
+
+         alter table student modifiy name varchar(25);
+
+         ->show databaases;
+         ->use databas;
+         ->show table;
+         ->desc student;
+         ->alter table student modify city varchar(30);
+         ->desc student;
+--------------------------------------------------------
+
+=> alter rename command 
+
+ 
+      when we want to channge colume name using of rename command
+
+      syntax:
+         
+         alter table <tablename> rename colume <columename> to <newcolume>;
+
+         e.g
+
+          -> alter table student rename colume score to marks;
+          -> desc student;
+
+----------------------------------------------------------------
+3) drop : to delete table or daatabase from the memory we can use drop command
+
+   ->syntax:
+       
+        drop table <tablename>;
+
+        or
+
+        drop databas <databasename>;
+
+        e.g.
+         
+         -> create table dummy
+         (
+            id int,
+            name varchar(20),
+            sunada varchar(20)
+         );
     
+    -> show tables;
+    -> drop table dummy;
+    ->show tables;
+
+----------------------------------------------------------------------
+
+4) Truncate : 
+
+      drop delete table and colum from the memory completellty but 
+      using of truncate command we can remove all records from the table 
+      but structure remain same 
+
+      means using of truncate we dont need to recreateate table but using of 
+      drop command we have to create table first re enter data.
+
+      truncate is faster then drop becuse it delete all record from the table,
+
+      e.g/
+      drop : account delete
+      truncate : delte order history or serch history.......
+
+
+      syntax: 
+
+      # truncate table <tablename>;
+
+       create table dummy(
+         id int,
+         name varchar(20)
+       );
      
+     truncate table dummy;
+
+     ahow tables;
+
+     ----------------------------------------------------------------------------------
+
+     5) Rename : when we want to channge table name we can use rename command 
+                 
+            syntax: 
+                rename table <oldname> to <newname>;
+
+                show table ;
+
+                -> note : we can also rename tablle name using of alter command 
+
+                syntax :
+                 
+                 alter table <oldname> rename to <newname>;
+====================================================================================
+DML : Data manipulation language :
+
+   
+   1) insert 
+   2) update
+   3) delete 
+
+   1) insert : insert command is used to score record in existing table using of specific 
+               colume wise.
+
+
+               syntax:
+                  
+                  insert inti <tablename>
+                              (coloumname1,columename2......)
+                        values
+                             (value1,value2.................);
+
+               e.g.
+                  
+                   insert into student
+                   (id,name,subjec,score,city)
+                   values
+                   (1,'divy','hindi',52,'ahwmdan');
+
+          ** =>DQL : selecct:
+
+                  to retrive all record from table 
+
+                  syntax : 
+                     
+                     select * from <tablename>;
+
+                     e.g.
+
+                      select * from student;
++------+------+--------+-------+---------+
+| id   | name | subjec | score | city    |
++------+------+--------+-------+---------+
+|    1 | divy | hindi  |    52 | ahwmdan |
++------+------+--------+-------+---------+
+--------------------------------------------------------------------------------------
+
+store multiple record usinng single insert command 
+
+=> insert into student
+  (id,name,subjec,score,city),
+  values
+  (2,'riya','java',95,'surat'),
+  (3,'diya','slutter',46,'kutch');
+
+
+=> without adding and columname in command 
+
+    -> insert into student 
+    values(4,'kisan','python',15,'sfsf');
+
+
+--------------------------------------------------------------------------------------
+
+           
