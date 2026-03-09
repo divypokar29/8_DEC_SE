@@ -571,3 +571,17 @@ syntax :
  ->select * from student where name like '%a_';
  
  ->select * from student where name like '____a%';
+
+ ------------------------------------------------------------------------------
+
+ => IS NULL / NOT NULL 
+
+    to check any field contain null value or not using of IS NULL and IS NOT NULL  condition
+    syntax : 
+
+      select fieldname from <tablename> where columnname is not null;
+
+      -> select * from student where name is not null;
+      -> select * from student where name is null;
+
+---------------------------------------------------------------------------
