@@ -339,4 +339,235 @@ store multiple record usinng single insert command
 
 --------------------------------------------------------------------------------------
 
-           
+      Constraints :
+       
+       1) NOT NULL
+       2) DEFAULT
+       3) PRIMARY KEY
+       4) UNIQUE
+       5) AUTO INCRIMATE
+       6) check
+       7) FORIGN KEY
+
+
+
+
+
+
+
+
+
+
+
+
+       6) CHECK : CHECK IS A ConstrainT which is mainly used to apply restriction on specific field
+                  for e.g emp table we can allow only more than 18 year old emply 
+
+                  syntax : 
+
+                      fieldname check fieldname condition;
+
+                  =>create table user
+                     (
+                     id int primary key auto_increment,
+                     name  varchar(20),
+                     age int check (age > 18)
+                     );
+
+                      desc user;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| id    | int         | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(20) | YES  |     | NULL    |                |
+| age   | int         | YES  |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+
+
+                  => insert into user (id,name,age)
+                     value (1,'raj',20);
+
+                  => selecct *  from user;
+
+                  =>insert into user (id,name,age) 
+                    values(2,'hol',4);
+                    ERROR 3819 : check Constraint 'user_chk_1' is violated.
+
+
+                    => alter table user drop column age;
+
+                    => alter table user add colum age int;
+
+                    => alter table user add Constraint check_age check (age>18);
+                    add UNIQUE constrain name using of alter command
+
+                    => alter table user add constrain user_pk primary key(id);
+
+                    =>alter table user drop primary key;
+
+======================================================================================
+
+2) updete : when we want to update records based on specific condition wise we can use update command
+            
+            update command is a part od DML (data manipulation laanguage)
+
+            syntax : 
+
+
+            update <tablename> set columnname=fieldname,columename=fieldname
+            where condition;
+            
+
+            ->select * from student;
+            ->update student set marks=55 where id =2;
+            ->select * from student;
+
+             select * from student ;
++------+-------+--------+-------+---------+
+| id   | name  | subjec | score | city    |
++------+-------+--------+-------+---------+
+|    1 | divy  | hindi  |    52 | ahwmdan |
+|    2 | roiya | java   |    55 | surat   |
++------+-------+--------+-------+---------+
+
+
+ -> update student set name='jan',subject='java',city-'jamnagar' where id =1;
+
+ select * from student;
++------+------+--------+-------+----------+
+| id   | name | subjec | score | city     |
++------+------+--------+-------+----------+
+|    1 | divy | hindi  |    52 | ahwmdan  |
+|    2 | jan  | java   |    55 | jamnagar |
++------+------+--------+-------+----------+
+
+->update student set name='riya' where name='divy';
+
+select * from student;
++------+------+--------+-------+----------+
+| id   | name | subjec | score | city     |
++------+------+--------+-------+----------+
+|    1 | Riya | hindi  |    52 | ahwmdan  |
+|    2 | jan  | java   |    55 | jamnagar |
++------+------+--------+-------+----------+
+
+====================================================================================================
+3) Delete : when we want to delete or rename specific row condition wise we can 
+           use delete command
+
+           syntax:
+
+            -> delete from <tablename>  where condition;
+            ->delete from student where id=1;
+            select * from student;
++------+-------+---------+-------+-----------+
+| id   | name  | subjec  | score | city      |
++------+-------+---------+-------+-----------+
+|    2 | jan   | java    |    55 | jamnagar  |
+| NULL | rana  | bhanu   |    85 | bhopal    |
+| NULL | jugnu | wnglis  |    15 | rajisthan |
+| NULL | rahul | gujrati |    32 | mumbai    |
++------+-------+---------+-------+-----------+
+4 rows in set (0.00 sec)
+
+-> delete from studetn where score =>20;
+
+------------------------------------------------------------------------------------------------------
+
+III) DQL : Data Query language:
+
+      most most powerfull concept of sql 
+
+      when we want to retrive records from the table we can use DQL command
+
+      -> select
+
+using or select command we can retrive difrent diffrent record with specific condition wise.
+
+
+syntax:
+
+-> select * from <tablename>;
+
+e.g. ->select * from student ;
+
+fetch specific colume from table 
+
+
+syntax :
+    
+     -> select fieldname,fieldname2,............... from <tablename>;
+
+     e.g.  select name,subject from student;
+
+     fetch specific data using of condition wise
+     for condition we use where clause.
+
+     syntax: select * from <tablename> where condition;
+
+     e.g. -> select * from student where city='ahemdabade';
+
+     -> select name ,subjec,city.from student where city = 'ahemdabade';
+
+
+     conditional operaters : 
+
+               => , != ,> ,< ,>= ,<=
+
+     logical operators : 
+
+               => and, or, not
+      
+      membership operators :
+
+               => in , not in , between
+
+      pattern matching operators :
+              
+               => like, not like
+
+      null operators :
+
+               => is null , is  not null
+
+-------------------------------------------------------
+
+-> select * from student where marks < 60;
+
++------+-------+---------+-------+-----------+
+| id   | name  | subjec  | score | city      |
++------+-------+---------+-------+-----------+
+|    2 | jan   | java    |    55 | jamnagar  |
+| NULL | jugnu | wnglis  |    15 | rajisthan |
+| NULL | rahul | gujrati |    32 | mumbai    |
++------+-------+---------+-------+-----------+
+
+-> select * from student where score > 50  and score <60;
+-> select student set score = 40,city='mumbai' where id =1;
+-> select * from student;
+-> select * from student where subject ='java', and city='surat';
+-> select from student where subjec = 'java' or subject='python';
+->select name,subjec from studetn where subjec != 'java';
+
+->selecct name,subjec,city from student where subject in('java','python');
+->select name,city from student where city in ('ahemdabade','surat');
+-> selecct name,city from student where city not in ('ahemdabade','surat');
+->select  name,score from student where score between 50 and 60;
+
+-----------------------------------------------------------------------------------
+
+=>LIKE:
+
+ syntax: select * from <tablename> where name like '%a%';
+
+ ->select * from student where name like '%a%';
+
+ ->select * from student where name like 'a%';
+
+ ->select * from student where name like '%a';
+ 
+ ->select * from student where name like '_a%';
+ 
+ ->select * from student where name like '%a_';
+ 
+ ->select * from student where name like '____a%';
