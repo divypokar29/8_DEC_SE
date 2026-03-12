@@ -1085,3 +1085,283 @@ select * from B;
 | diya |
 | raj  |
 +------+  
+
+-----------------------------------------------------------------
+
+FORIGN key: this is a most powerfull topic of constrain and sql language
+
+    
+    using of foriegn key we can build releationship between two tables 
+
+    1) A parent -> k child
+    2) B parent -> j child
+
+
+    child                                                       parent
+
+id    c_name      p_id                                  id          p_name 
+
+1        K          1                                    1            A
+2        j          1                                    2            B
+3        M          2                                    3            c
+
+
+==> create table parent (
+   id int primary key auto_increment,
+   p_name varchar(20),
+   city varchar(20)
+);
+
+
+==> insert into parent(
+   (p_name,city)
+   values
+   ('a_parent','mumbai'),
+   ('b_parent','delhi'),
+   ('c_parent','pune'),
+   ('d_parent','surat');
+
+   select * from parent;
++----+------------+--------+
+| id | p_name     | city   |
++----+------------+--------+
+|  1 | a_parent   | mumbai |
+|  2 | b_parent   | delhi  |
+|  3 | c_parent   | pune   |
+|  4 | d_parent   | surat  |
++----+------------+--------+
+
+
+==>  CREATE TABLE child (
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        c_name VARCHAR(20),
+        p_id INT,
+        CONSTRAINT fk_parent
+        FOREIGN KEY (p_id) REFERENCES parent(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+    );
+
+
+==> insert into child(c_name,p_id)
+   values
+   ('k_child',1),
+   ('j_child',1),
+   ('m_child',2),
+   ('n_child',3);
+
+   select * from child;
++----+-----------+--------+
+| id | c_name    | p_id   |
++----+-----------+--------+
+|  1 | k_child   |      1 |
+|  2 | j_child   |      1 |
+|  3 | m_child   |      2 |
+|  4 | n_child   |      3 |
++----+-----------+--------+
+
+==>
+ 
+desc child;
++--------+-------------+------+-----+---------+----------------+
+| Field  | Type        | Null | Key | Default | Extra          |
++--------+-------------+------+-----+---------+----------------+
+| id     | int         | NO   | PRI | NULL    | auto_increment |
+| c_name | varchar(20) | YES  |     | NULL    |                |
+| p_id   | int         | YES  | MUL | NULL    |                |
++--------+-------------+------+-----+---------+----------------+
+
+note : foriegn key apply restrictions on invalid or unrelavent data
+======================================================================
+
+1) DDL 
+2) DML 
+3) DQL
+4) DCL : Data CONTROL language
+
+using of DCL command on can restrict user to perform specific DML commands
+
+   DCL commands
+
+   1) GRANT : using of grant command on can give permission to user to perform specific DML commands
+
+   2) REVOKE : using of revoke command on can remove permission from user to perform specific DML commands
+
+   in my sql we can checck number of user
+
+
+==>  select user,host from mysql.user;
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
++------------------+-----------+
+
+
+==> create user 'divy'@'localhost' identified by '123';
+ 
+select user,host from mysql.user ;
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| divy             | localhost |
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
++------------------+-----------+
+
+==> selecct * from 8decse.parent;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'selecct * from 8decse.parent' at line 1
+
+==> grant : syntax: 
+
+  grant <permissionlist>
+  on <database_name>.<table_name>
+  to <username>@<host>;
+
+==> grant select on 8decse.parent to 'divy'@'localhost';
+
+==> now loging from divy@localhost
+
+==> select * from 8decse.parent;
++----+------------+--------+
+| id | p_name     | city   |
++----+------------+--------+
+|  1 | a_parent   | mumbai |
+|  2 | b_parent   | delhi  |
+|  3 | c_parent   | pune   |
+|  4 | d_parent   | surat  |
++----+------------+--------+
+
+==> insert into 8decse.parent(p_name,city)
+   values
+   ('e_parent','surat');
+
+   ERROR 1142 (42000): INSERT command denied to user 'divy'@'localhost' for table 'parent'
+
+==> revoke : syntax: 
+
+   revoke <permissionlist>
+   on <database_name>.<table_name>
+   from <username>@<host>;
+
+==> revoke insert on 8decse.parent from 'divy'@'localhost';
+
+==> now loging from divy@localhost
+
+==> insert into 8decse.parent(p_name,city)
+   values
+   ('e_parent','surat');
+
+   ERROR 1142 (42000): INSERT command denied to user 'divy'@'localhost' for table 'parent'
+---------------------------------------------------------------------------------------------
+
+1) DDL 
+2) DML 
+3) DQL
+4) DCL : Data CONTROL language
+5) TCL : Transaction CONTROL language
+
+when we want to do some changes after executing commans we can go back ti previous command
+
+using of TCL command
+
+for e.g.   we order any product - add to cart - payment
+
+but due to some resone payment is failes - at that time i want to cancel all previous Trangaction
+at that time we can use TCL command
+
+1) BEGIN : start transaction
+2) COMMIT : save transaction
+3) ROLLBACK : cancel transaction
+4) savepoint : save specific transaction
+
+=======================================================================
+1) rollback : when we want to back to go back on starting of transaction it work like undo 
+
+2) commit : when we want to save transaction it work like save
+
+3) savepoint : when we want to save specific transaction it work like savepoint
+
+4) begin : when we want to start transaction it work like begin
+
+=======================================================================
+
+==>select * from student;
++------+-------+---------+-------+-----------+
+| id   | name  | subjec  | score | city      |
++------+-------+---------+-------+-----------+
+|    2 | jan   | java    |    55 | jamnagar  |
+| NULL | rana  | bhanu   |    85 | bhopal    |
+| NULL | jugnu | wnglis  |    15 | rajisthan |
+| NULL | rahul | gujrati |    32 | mumbai    |
++------+-------+---------+-------+-----------+
+
+==> start transaction;
+
+==> update student set subject="ai" where id = 2;
+
+==> select * from student;
++------+-------+---------+-------+-----------+
+| id   | name  | subjec  | score | city      |
++------+-------+---------+-------+-----------+
+|    2 | jan   | AI      |    55 | jamnagar  |
+| NULL | rana  | bhanu   |    85 | bhopal    |
+| NULL | jugnu | wnglis  |    15 | rajisthan |
+| NULL | rahul | gujrati |    32 | mumbai    |
++------+-------+---------+-------+-----------+
+==> rollback;
+
+==> select * from student;
++------+-------+---------+-------+-----------+
+| id   | name  | subjec  | score | city      |
++------+-------+---------+-------+-----------+
+|    2 | jan   | java    |    55 | jamnagar  |
+| NULL | rana  | bhanu   |    85 | bhopal    |
+| NULL | jugnu | wnglis  |    15 | rajisthan |
+| NULL | rahul | gujrati |    32 | mumbai    |
++------+-------+---------+-------+-----------+
+
+==> savepoint s1;
+
+==> update student set subject="ai" where id = 2;
+
+==> select * from student;
++------+-------+---------+-------+-----------+
+| id   | name  | subjec  | score | city      |
++------+-------+---------+-------+-----------+
+|    2 | jan   | AI      |    55 | jamnagar  |
+| NULL | rana  | bhanu   |    85 | bhopal    |
+| NULL | jugnu | wnglis  |    15 | rajisthan |
+| NULL | rahul | gujrati |    32 | mumbai    |
++------+-------+---------+-------+-----------+
+
+==> rollback to s1;
+
+==> select * from student;
++------+-------+---------+-------+-----------+
+| id   | name  | subjec  | score | city      |
++------+-------+---------+-------+-----------+
+|    2 | jan   | java    |    55 | jamnagar  |
+| NULL | rana  | bhanu   |    85 | bhopal    |
+| NULL | jugnu | wnglis  |    15 | rajisthan |
+| NULL | rahul | gujrati |    32 | mumbai    |
++------+-------+---------+-------+-----------+
+
+==> commit;
+
+==> select * from student;
++------+-------+---------+-------+-----------+
+| id   | name  | subjec  | score | city      |
++------+-------+---------+-------+-----------+
+|    2 | jan   | java    |    55 | jamnagar  |
+| NULL | rana  | bhanu   |    85 | bhopal    |
+| NULL | jugnu | wnglis  |    15 | rajisthan |
+| NULL | rahul | gujrati |    32 | mumbai    |
++------+-------+---------+-------+-----------+
+
+==>
