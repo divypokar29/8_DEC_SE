@@ -45,5 +45,5 @@ int main()
     cout<<"Addition array\n";
     a3.display();
 
-    return 0;
+    
 }

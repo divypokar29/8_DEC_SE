@@ -21,5 +21,5 @@ int main()
     cout<<"Multiplication = "<<multiply(a,b)<<endl;
     cout<<"Cube of "<<a<<" = "<<cube(a)<<endl;
 
-    return 0;
+
 }

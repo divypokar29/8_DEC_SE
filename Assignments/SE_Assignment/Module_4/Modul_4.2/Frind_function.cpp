@@ -41,6 +41,4 @@ int main()
 
     cout<<"After Swap\n";
     s.display();
-
-    return 0;
 }
