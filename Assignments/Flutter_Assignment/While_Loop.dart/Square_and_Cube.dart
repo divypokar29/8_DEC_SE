@@ -1,14 +1,9 @@
-#include<stdio.h>
+import 'dart:io';
 
-int main()
-{
-    int n;
+void main() {
+  print("Enter number:");
+  int n = int.parse(stdin.readLineSync()!);
 
-    printf("Enter number: ");
-    scanf("%d",&n);
-
-    printf("Square = %d\n",n*n);
-    printf("Cube = %d\n",n*n*n);
-
-    
+  print("Square = ${n * n}");
+  print("Cube = ${n * n * n}");
 }

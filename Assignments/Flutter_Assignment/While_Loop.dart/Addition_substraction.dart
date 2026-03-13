@@ -1,16 +1,14 @@
-#include<stdio.h>
+import 'dart:io';
 
-int main()
-{
-    int a,b;
+void main() {
+  print("Enter first number:");
+  int a = int.parse(stdin.readLineSync()!);
 
-    printf("Enter two numbers: ");
-    scanf("%d%d",&a,&b);
+  print("Enter second number:");
+  int b = int.parse(stdin.readLineSync()!);
 
-    printf("Addition = %d\n",a+b);
-    printf("Subtraction = %d\n",a-b);
-    printf("Multiplication = %d\n",a*b);
-    printf("Division = %d\n",a/b);
-
-    
+  print("Addition = ${a + b}");
+  print("Subtraction = ${a - b}");
+  print("Multiplication = ${a * b}");
+  print("Division = ${a / b}");
 }
