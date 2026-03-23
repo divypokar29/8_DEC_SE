@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .Container {
+            background-color: rgb(96, 187, 187);
+            color: white;
+            height: 250px;
+            display: flex;
+        }
+
+        .subContainer {
+            background-color: blueviolet;
+            color: white;
+            height: 100px;
+            width: 100px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        div h1 {
+            text-align: center;
+        }
+
+        .content {
+            background-color: brown;
+            color: white;
+            padding: 20px;
+            display: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            color: red;
+
+        }
+
+        .content:target {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Container">
+        <div class="subContainer">
+            <a href="#python">
+                <h1>
+                    Python
+                </h1>
+            </a>
+        </div>
+        <div class="subContainer">
+            <a href="#java">
+                <h1>
+                    Java
+                </h1>
+            </a>
+        </div>
+        <div class="subContainer">
+            <a href="#html">
+                <h1>
+                    HTML
+                </h1>
+            </a>
+        </div>
+
+    </div>
+    <div id="python" class="content">
+        <h1>Python: most power full language</h1>
+    </div>
+    <div id="java" class="content">
+        <h1>Java:reich language</h1>
+    </div>
+    <div id="html" class="content">
+        <h1>HTML: hayper text markup language</h1>
+    </div>
+</body>
+
+</html>

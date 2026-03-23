@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        table {
+            position: center;
+        }
+
+        tr,
+        td {
+            padding: 20px;
+        }
+
+        input {
+            position: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <form>
+                <tr>
+                    <td><label>First name : </label></td>
+                    <td><input style="background-color: bisque;" type="text" name="fname" placeholder="Enter first name"
+                            required></td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Email :
+                    </td>
+                    <td>
+                        <input style="background-color: aqua;" type="email" name="email" placeholder="Example@gmai.com"
+                            required>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Password :
+                    </td>
+                    <td>
+                        <input type="password" style="background-color: rgb(165, 210, 212);" name="password"
+                            placeholder="Enter password" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gender :
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                        <input type="radio" name="gender" value="other"> Other
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        City :
+                    </td>
+                    <td>
+                        <select name="city">
+                            <option selected disabled readonly>-- Select any---</option>
+                            <option value="Ahemdabade"> Ahemdabade </option>
+                            <option value="Surat"> Surat </option>
+                            <option value="Baroda"> Baroda </option>
+                            <option value="Rajkot"> Rajkot </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Hobbies :
+                    </td>
+                    <td>
+                        <input type="checkbox" name="C_chk" value="clanguage"> C Language
+                        <input type="checkbox" name="j_chk" value="java"> Java
+                        <input type="checkbox" name="p_chk" value="paython"> Paython
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Address :
+                    </td>
+                    <td>
+                        <textarea rows="10" cols="35    " placeholder="Type your Address here..."
+                            style="background-color: rgb(216, 163, 163);"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><input style="background-color: red; " type="submit" value="SUBMIT"></td>
+
+                </tr>
+            </form>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

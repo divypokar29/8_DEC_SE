@@ -1,0 +1,165 @@
+HTML : Hyper Text Markup Language
+
+html stands for markup pages
+
+using of html we can design web pages which is run on web browsers.
+
+html is a combination or collection of multiple tags
+
+there are 2 types of tags
+
+1) singular tag
+2) paired tag
+
+--------------------------------
+1) singular tag : there are only 3 tags
+
+<br>
+<hr>
+<img>
+
+2) paired tag : which contain opening and closing bracket.
+
+syntax ::
+
+<openingtag> content goes here... </closingtag>
+
+
+    -----------------------------------------------------
+    structure of html
+
+    <html>
+
+    <head> .. </head>
+
+    .
+
+    <body> ... </body>
+
+    </html>
+
+
+    ===================================
+    heading tags :::
+
+    <h1>.... </h1>
+    <h2> ... </h2>
+    .
+    .
+    <h6> ... </h6>
+
+    ===================================
+    paragraph tag :
+
+    <p> : paragraph tag which is represent by p tag which contain paragraph value
+
+        =======================================
+        list :
+
+        there are 3 types of list
+
+        1) unorder list
+        2) order list
+        3) description list
+
+        -------------------------------
+        1) unorder list : which is represent by
+    <ul> tag
+
+        <ul>
+            <li>... item content here.. </li>
+            <li>... item content here.. </li>
+            ..
+
+        </ul>
+
+        2) order list : which is represent by <ol>
+
+            <ol>
+                <li>order list</li>
+                .
+                .
+            </ol>
+
+            3) description list : which is represent by <dl>
+
+                <dl>
+                    <dt>description tag </dt>
+                    <dd>description detailed</dd>
+                </dl>
+----------------------------------------------------------
+
+css : Cascanding style sheet
+
+  there are 3 ways to apply css in html web pages
+
+  1) inline css
+  2) internal css
+  3) external css
+
+  ---------------------------------------------------
+
+  1) inline css: apply css on specific element its called inline css 
+
+  syntax: 
+  <h1 style = "property : value ;">content</h1>
+
+  2) internal css : it is apply on specific web pages
+
+    <style>
+        
+    </style>
+
+
+  3) external css : it is apply on multiple web pages 
+
+      we can apply external css on full web page 
+
+      create external css web page and connect with
+
+      <link rel = "stylesheet" href = "filename.css">
+
+=============================================================================
+
+selector :
+
+1) element selector : apply css element wise 
+
+e.goes
+h1
+{
+    property : value ;
+}
+
+2) group selector : apply css on multiple elements 
+
+e.g.
+h1,h2,h3
+{
+    property : value ;
+}
+
+3) id selector :  to represent unique style for element we can use id selector 
+
+e.g.
+#id
+{
+    property : value ;
+}
+
+4) class selector : apply css on specific element 
+
+e.g.
+.class
+{
+    property : value ;
+}
+
+5) universal selector : apply css on all elements 
+
+e.g.
+*
+{
+    property : value ;
+}
+
